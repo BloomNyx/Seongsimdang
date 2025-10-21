@@ -1,3 +1,24 @@
+@charset "utf-8";
+
+*{
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
 body {
   margin: 0;
   font-family: 'Noto Sans KR', sans-serif;
@@ -84,8 +105,19 @@ body {
 
 .header-links a {
   color: #fff;
-  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
 }
+
+.header-links a img {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  object-fit: cover;
+}
+
 
 .header-links a:hover {
   color: #d4b068;
@@ -237,7 +269,7 @@ body {
 }
 
 .footer_info a.highlight {
-  color: #f2b66d;
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -255,7 +287,7 @@ body {
 .call_number {
   font-size: 28px;
   font-weight: bold;
-  color: #f2b66d;
+  color: #ffffff;
   margin-bottom: 5px;
 }
 
