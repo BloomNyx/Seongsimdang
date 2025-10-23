@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // === 메인 비주얼 슬라이드 ===
   const slides = document.querySelectorAll("#slider .slider");
   const dots = document.querySelectorAll(".dot");
   let current = 0;
@@ -21,4 +22,31 @@ document.addEventListener("DOMContentLoaded", () => {
   dots.forEach((dot, index) => {
     dot.addEventListener("click", () => showSlide(index));
   });
+
+  // === 패밀리 브랜드 슬라이드 ===
+  const familyList = document.querySelector(".family-list");
+  const leftArrow = document.querySelector(".family-slider .arrow.left");
+  const rightArrow = document.querySelector(".family-slider .arrow.right");
+
+  if (familyList && leftArrow && rightArrow) {
+    const itemWidth = 240; // li 하나의 실제 너비 (gap 포함)
+    const visibleCount = 4; // 한 번에 보이는 카드 개수
+    let scrollPosition = 0;
+
+    const updateTransform = () => {
+      familyList.style.transform = `translateX(-${scrollPosition}px)`;
+    };
+
+    rightArrow.addEventListener("click", () => {
+      const maxScroll =
+        (familyList.children.length - visibleCount) * itemWidth;
+      scrollPosition = Math.min(scrollPosition + itemWidth, maxScroll);
+      updateTransform();
+    });
+
+    leftArrow.addEventListener("click", () => {
+      scrollPosition = Math.max(scrollPosition - itemWidth, 0);
+      updateTransform();
+    });
+  }
 });

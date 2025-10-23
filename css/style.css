@@ -295,6 +295,175 @@ body {
   line-height: 1.6;
 }
 
+/* 명예의 전당 버튼 */
+.signature-btn-wrap {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.signature-btn {
+  background-color: #7b5e3a;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.signature-btn:hover {
+  background-color: #d4b068;
+  transform: scale(1.05);
+}
+
+/* 시그니처 섹션 슬라이드 컨테이너 */
+.signature-slider {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* 리스트를 가로로 배치 */
+.signature-list {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 40px;
+}
+
+/* 각 항목 */
+.signature-list li {
+  flex: 0 0 260px;
+  text-align: center;
+  background-color: #f8f1e6;
+}
+
+/* 화살표 버튼 */
+.arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: rgba(210, 180, 140, 0.8);
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 26px;
+  line-height: 45px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background-color: #d4b068;
+}
+
+.arrow.prev {
+  left: 0;
+}
+
+.arrow.next {
+  right: 0;
+}
+
+/* ====== 패밀리 브랜드 영역 ====== */
+#family {
+  text-align: center;
+  background-color: #f8f0e3;
+  padding: 80px 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+#family h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3a2d1e;
+  margin-bottom: 5px;
+}
+
+#family .sub {
+  font-size: 14px;
+  color: #7a6a55;
+  margin-bottom: 40px;
+}
+
+.family-slider {
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.family-list {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
+}
+
+.family-list li {
+  min-width: 220px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.family-list li:hover {
+  transform: scale(1.03);
+}
+
+.family-list img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.family-list p {
+  padding: 12px;
+  font-size: 15px;
+  color: #5c4b36;
+  font-weight: 600;
+}
+
+/* 화살표 버튼 */
+.family-slider .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(80, 60, 40, 0.7);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 26px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 20;
+}
+
+.family-slider .arrow:hover {
+  background-color: #c9a25a;
+}
+
+.family-slider .arrow.left {
+  left: 0;
+}
+
+.family-slider .arrow.right {
+  right: 0;
+}
+
+
 
 .footer {
   background-color: #111;
