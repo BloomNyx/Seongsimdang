@@ -1,3 +1,5 @@
+// ==== main임 ====
+
 document.addEventListener("DOMContentLoaded", () => {
   // === 메인 비주얼 슬라이드 ===
   const slides = document.querySelectorAll("#slider .slider");
@@ -49,4 +51,18 @@ document.addEventListener("DOMContentLoaded", () => {
       updateTransform();
     });
   }
+    // 로고 클릭 시 메인 페이지로 이동
+document.addEventListener("DOMContentLoaded", () => {
+  const logo = document.querySelector(".logo a");
+
+  if (logo) {
+    logo.addEventListener("click", (e) => {
+      e.preventDefault(); // 기본 링크 동작 막기
+      window.location.href = "index.html"; // 메인 페이지로 이동
+    });
+  }
 });
+});
+
+// about
+
