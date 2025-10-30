@@ -64,5 +64,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 });
 
-// about
 
+  // 부드러운 스크롤 기능
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault(); // 기본 이동 막기
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth', // 부드럽게 이동
+          block: 'start'
+        });
+      }
+    });
+  });
