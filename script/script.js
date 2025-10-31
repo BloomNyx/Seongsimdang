@@ -25,6 +25,19 @@ document.addEventListener("DOMContentLoaded", () => {
     dot.addEventListener("click", () => showSlide(index));
   });
 
+$(function() {
+  // 서브메뉴 슬라이드 효과
+  $('.main-menu > li').hover(
+    function() {
+      $(this).find('.sub-menu').stop(true, true).slideDown(250);
+    },
+    function() {
+      $(this).find('.sub-menu').stop(true, true).slideUp(250);
+    }
+  );
+});
+
+
   // === 패밀리 브랜드 슬라이드 ===
   const familyList = document.querySelector(".family-list");
   const leftArrow = document.querySelector(".family-slider .arrow.left");
